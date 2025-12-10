@@ -1,0 +1,256 @@
+/* Global Reset and Variables */
+:root {
+    --dark-blue: #000033; /* Navigation Bar/Main Dark Color */
+    --light-blue: #ADD8E6; /* Light background shade (for the card section below hero) */
+    --primary-text-color: #ffffff;
+    --secondary-text-color: #bbbbbb;
+    --cta-card-bg: #141c4a; /* Dark blue/indigo for the CTA card */
+    --cta-btn-color: #1a73e8; /* Blue for Explore button */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif; /* Replace with the actual font */
+}
+
+body {
+    background-color: var(--light-blue); /* Overall light background */
+    color: #333;
+}
+
+/* --- Header / Navbar --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-color: var(--dark-blue);
+    color: var(--primary-text-color);
+}
+
+.logo-text {
+    font-weight: bold;
+    font-size: 1.2em;
+    /* Logo image/icon placement can go here */
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.nav-links a {
+    color: var(--secondary-text-color);
+    text-decoration: none;
+    margin-left: 15px;
+    font-size: 0.85em;
+    white-space: nowrap; /* Prevents links from breaking */
+    padding: 5px 0;
+}
+
+.nav-links a:hover {
+    color: var(--primary-text-color);
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    position: relative;
+    height: 750px; /* Increased height to accommodate the content */
+    background-image: url('image_de1a96.jpg'); /* Use the uploaded image */
+    background-size: cover;
+    background-position: center;
+    color: var(--primary-text-color);
+    text-align: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* Dark blue overlay with transparency matching the image */
+    background-color: rgba(0, 0, 51, 0.9); 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 80px; 
+}
+
+.hero-section h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.tagline {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+}
+
+.hero-text-content {
+    width: 65%;
+    max-width: 800px;
+    margin-bottom: 20px;
+}
+
+.hero-text-content p {
+    font-size: 0.95em;
+    line-height: 1.5;
+    color: var(--secondary-text-color);
+}
+
+.primary-btn {
+    padding: 10px 30px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #007bff; /* A prominent blue color for the button */
+    color: white;
+    margin-bottom: 50px;
+    transition: background-color 0.3s;
+}
+
+/* --- Community Box --- */
+.community-box {
+    background-color: transparent; /* No specific background on the box itself, just the overlay */
+    padding: 0 5%;
+    width: 100%;
+    max-width: 900px;
+    margin-top: 20px;
+}
+
+.community-box h3 {
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+.community-box p {
+    font-size: 0.9em;
+    color: var(--secondary-text-color);
+    margin-bottom: 20px;
+}
+
+.form-group {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.form-group input {
+    padding: 12px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+    width: 40%;
+    max-width: 350px;
+    background-color: var(--primary-text-color);
+    color: #333;
+}
+
+.submit-btn {
+    padding: 12px 25px;
+    border: none;
+    background-color: var(--cta-btn-color); 
+    color: white;
+    font-weight: bold;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+/* --- CTA Card Section --- */
+.cta-section {
+    display: flex;
+    justify-content: center;
+    padding: 40px 5%;
+    background-color: var(--light-blue); 
+}
+
+.cta-card {
+    display: flex;
+    background-color: var(--cta-card-bg);
+    color: var(--primary-text-color);
+    border-radius: 8px;
+    max-width: 800px;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    overflow: hidden; /* To contain the image placeholder */
+}
+
+.card-image-placeholder {
+    width: 300px; /* Width based on screenshot */
+    min-height: 200px;
+    background-color: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* In a real scenario, this would be an actual image */
+    background-image: url('[Placeholder for Group Image]'); 
+    background-size: cover;
+    background-position: center;
+}
+
+.card-content {
+    padding: 25px 30px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-content h4 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    font-size: 0.9em;
+    color: var(--secondary-text-color);
+    margin-bottom: 20px;
+}
+
+.card-btn {
+    align-self: flex-start;
+    background-color: transparent;
+    border: none;
+    color: var(--primary-text-color);
+    font-weight: bold;
+    cursor: pointer;
+    padding: 5px 0;
+    border-bottom: 2px solid var(--primary-text-color);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 992px) {
+    .nav-links a {
+        margin-left: 10px;
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nav-links {
+        justify-content: center;
+        margin-top: 10px;
+    }
+    .hero-section {
+        height: 650px;
+    }
+    .community-box, .hero-text-content {
+        width: 90%;
+    }
+    
+    .cta-card {
+        flex-direction: column;
+    }
+    .card-image-placeholder {
+        width: 100%;
+        min-height: 150px;
+    }
+}
